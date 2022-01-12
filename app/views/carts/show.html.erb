@@ -24,8 +24,9 @@
           <th colspan="4">
             TOTAL:
           </th>
+        font-size: 0.8em;
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
           </th>
         </tr>
       </tfoot>
