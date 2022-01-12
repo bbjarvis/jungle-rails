@@ -19,12 +19,17 @@
           <dt>Description</dt>
           <dd><%= @product.description %></dd>
           <dt>Quantity</dt>
+          <% if @product.quantity === 0 %>
+          <dd>SOLD OUT!</dd>
+          <% else %>
           <dd><%= @product.quantity %></dd>
+          <% end %>
           <dt>Price</dt>
           <dd><%= humanized_money_with_symbol @product.price %></dd>
         </dl>
       </div>
     </div>
+
 
   </article>
 
