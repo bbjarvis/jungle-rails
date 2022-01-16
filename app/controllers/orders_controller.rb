@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+
   end
 
   def create
@@ -24,6 +25,10 @@ class OrdersController < ApplicationController
   end
   helper_method :enhanced_order
 
+  def order_total_cents
+    enhanced_order.map {|entry| entry[:product].price_cents * entry[:quantity]}.sum
+  end
+  helper_method :order_total_cents
 
   private
 
