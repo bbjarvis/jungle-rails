@@ -1,0 +1,9 @@
+<tr>
+  <td>
+  <h4><%= category.name %></h4>
+    <br>
+  </td>
+  <td>
+    <%= pluralize category.products.order(created_at: :desc).size, 'product' %>
+  </td>
+</tr>

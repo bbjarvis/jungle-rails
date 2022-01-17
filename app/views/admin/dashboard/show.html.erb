@@ -1,6 +1,6 @@
 <h1>Admin Dashboard</h1>
-
-<table class="table table-hover">
+<div class="panel panel-default products">
+<table class="table table-hover table-bordered">
   <thead>
     <tr>
       <th scope="col">Database</th>
@@ -8,13 +8,19 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><a href='../admin/products'>Products</a></td>
+    <tr class="product">
+      <td>
+      <h4><%= link_to 'Products', "../admin/products" %></h4>
+      </td>
       <td><%= @product_count %></td>
     </tr>
     <tr>
-      <td><a href="../admin/categories">Categories</a></td>
+      <td>
+      <h4><%= link_to 'Categories', "../admin/categories" %></h4>
+      </td>
       <td><%= @category_count %></td>
     </tr>
   </tbody>
+  </div>
+
 </table>
